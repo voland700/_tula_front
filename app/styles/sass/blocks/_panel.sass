@@ -1,0 +1,123 @@
+.panel
+	display: flex
+	justify-content: space-between
+	background-color: $bg_l
+	width: 100%
+	height: 46px
+	box-sizing: border-box
+	z-index: 10
+
+.panel_user,
+.panel_cart
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 50%
+	text-decoration: none
+	color: #636b80
+	font-size: 1.2rem
+	transition: $transitionBtn
+	background-color: transparent
+	&:hover,
+	&:focus
+		background-color: rgba(0,0,0,0.5)
+		color: #fff
+
+.panel_user
+	border-right: 1px solid rgba(0,0,0,0.05)
+	.icon-user
+.panel_cart
+	.icon-cart
+		position: relative
+.panel_cart_count
+	position: absolute
+	display: inline-block
+	top: -7px
+	min-width: 18px
+	height: 18px
+	background-color: #000
+	border: none
+	border-radius: 10px
+	font-size: .8rem
+	text-align: center
+	line-height: 18px
+	color: #f1f1f1
+.panel_cart_count.full
+	padding: 0 5px
+
+.panel_admin
+	display: none
+
+@media (min-width: 767.98px)
+	.panel
+		position: fixed
+		top: 250px
+		right: 0
+		display: block
+		background-color: transparent
+		width: 50px
+		height: auto
+		box-sizing: border-box
+		overflow: hidden
+		border: none
+		border-radius: 3px 0 0 3px
+		z-index: 10
+		box-shadow: 0px 0px 12px rgb(0, 0, 0, .36)
+		z-index: 150
+
+	.panel_user,
+	.panel_cart,
+	.panel_admin
+		display: inline-block
+		width: 100%
+		box-sizing: border-box
+		background-color: $bg_l
+		text-align: center
+		padding: 10px 0
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+		color: #636b80
+		text-decoration: none
+
+
+	.panel_user
+		height: 50px
+	.panel_cart
+		height: 72px
+	.panel_cart_count
+		position: absolute
+		display: inline-block
+		min-width: 20px
+		top: 10px
+		left: 0
+		height: 20px
+		margin: 15px auto
+		border: none
+		border-radius: 10px
+		font-size: .8rem
+		text-align: center
+		line-height: 20px
+		background-color: #636b80
+		color: darken($gray_d, 10%)
+	.panel_cart_count.full
+		padding: 0 5px
+		background-color: #000
+		color: #fff
+	.panel_admin
+		display: block
+		height: 50px
+		font-size: 1.5rem
+		line-height: 27px
+	.panel_admin_txt
+		font-size: 1.4rem
+		font-weight: 700
+
+	.panel_user,
+	.panel_cart,
+	.panel_admin
+		transition: $transitionBtn
+		&:hover,
+		&:focus,
+		&:active
+			color: #fff
+			background-color: $txtb
+			border-left: none

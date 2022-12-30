@@ -1,0 +1,660 @@
+.container.top
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	max-width: 100%
+	margin-left: 0
+	margin-right: 0
+	padding-left: 0
+	padding-right: 0
+
+.top_catalog_wrap,
+.top_menu_wrap,
+.top_phone_wrap,
+.top_search_wrap
+	width: 25%
+	height: 46px
+	box-sizing: border-box
+	background-color: $txtb
+	border-left: 1px solid $txt_l
+	//position: relative
+
+.top_link
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	text-decoration: none
+	text-align: center
+	color: #fff
+	font-size: .9rem
+	transition: $transitionBtn
+	background-color: transparent
+	&:hover,
+	&:focus,
+	&:active
+		color: #fff
+.top_link.active
+	background-color: #000
+	color: #fff
+.top_catalog_title
+	display: none
+
+.top_menu_wrap
+
+.top_menu_ul
+	display: none
+	position: absolute
+	top: 46px
+	left: 0
+	width: 100%
+	margin: 0
+	padding-left: 0
+	list-style: none
+	background-color: #000
+	overflow: hidden
+	transition: height .25s ease
+	color: #fff
+	z-index: 2
+.top_menu_ul.active
+	display: block
+	//animation-duration: .7s
+	//animation-fill-mode: both
+	//animation-name: fadeIn
+
+
+.top_menu_li
+	border-top: 1px solid #1b1d23
+
+.top_menu_link
+	display: block
+	width: 100%
+	height: 100%
+	padding: 10px 15px
+	color: #b7bbd3
+	font-size: .9rem
+	text-decoration: none
+	transition: $transitionBtn
+	&:hover,
+	&:focus,
+	&:active
+		color: #fff
+
+.top_menu_li-phone
+	border-top: 1px solid #1b1d23
+	list-style: none
+	line-height: 18px
+	padding:  10px 15px 10px 45px
+	margin-bottom: 7px
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		left: 15px
+		display: inline-block
+		width: 18px
+		height: 18px
+		background-size: 18px 18px
+		background-repeat: no-repeat
+		background-color: #fff
+		border: none
+		border-radius: 20px
+.top_phone_link
+	color: #b7bbd3
+	text-decoration: none
+	transition: color 0.15s ease 0s
+	&:hover,
+	&:focus,
+	&:active
+		color: #fff
+
+.top_menu_li-phone.callme
+	padding-left: 47px
+	&::before
+		display: none
+	.icon-phone
+		display: block
+		position: absolute
+		font-size: 1.1rem
+		//font-weight: 700
+		left: 16px
+
+
+.header_phone_btn
+	color: #b7bbd3
+	text-decoration: none
+	transition: color 0.15s ease 0s
+	font-size: 1.05rem
+	letter-spacing: 1px
+
+	&:hover,
+	&:focus,
+	&:active
+		color: #fff
+
+
+
+.tele2
+	&::before
+		background-image: url(/images/src/img//icons/tele2.png)
+
+.beeline
+	&::before
+		background-image: url(/images/src/img//icons/beeline.png)
+.megafon
+	&::before
+		background-image: url(/images/src/img//icons/megafon.png)
+.mts
+	&::before
+		background-image: url(/images/src/img//icons/mts.png)
+.top_time_wrap
+	display: none
+
+.top_search_form
+	padding: 12px 15px
+	display: flex
+	justify-content: space-between
+	position: relative
+
+
+	.icon-search
+		display: block
+		position: absolute
+		color: $bg_l
+		top: 20px
+		left: 22px
+		font-size: .95rem
+.top_search
+	width: calc( 80% - 7px )
+	height: 30px
+	box-sizing: border-box
+	border: 1px solid #dee0ee
+	border-radius: 3px
+	overflow: hidden
+	padding: 3px 10px 3px 30px
+	color: $txtb
+	&::placeholder
+		opacity: .8
+		font-style: italic
+
+.top_search_btn
+	display: block
+	width: 20%
+	height: 30px
+	box-sizing: border-box
+	border: 1px solid #dee0ee
+	border-radius: 5px
+	border-radius: 3px
+	color: $txtb
+	transition: $transitionBtn
+	background-color: transparent
+	&:hover,
+	&:focus,
+	&:active
+		color: #fff
+		background-color: $txtb
+		border-color: $txtb
+
+.top_logo_wrap
+	width: 100%
+	padding: 10px 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background-color: #f4f5fd
+.top_logo_link
+	display: inline-block
+	margin: auto
+.top_logo_img
+	display: block
+	width: 220px
+	height: auto
+
+@media (min-width: 767.98px)
+	.container.top
+		justify-content: space-between
+		//align-items: center
+		max-width: 720px
+		margin-left: auto
+		margin-right: auto
+		padding-left: calc(var(--bs-gutter-x)*.5)
+		padding-right: calc(var(--bs-gutter-x)*.5)
+		padding-top: 10px
+		//padding-bottom: 10px
+		width: 100%
+		background: $gray
+		//box-shadow: 0px 0px 51px rgb(0, 0, 0, .15)
+		&:before
+			box-shadow: -51px 0 51px -51px rgb(0, 0, 0, .15) inset
+			content: " "
+			height: 100%
+			left: -51px
+			position: absolute
+			top: 0
+			width: 51px
+
+		&:after
+			box-shadow: 51px 0 51px -51px rgb(0, 0, 0, .15) inset
+			content: " "
+			height: 100%
+			position: absolute
+			top: 0
+			right: -51px
+			width: 51px
+
+	.top_logo_wrap
+		order: 1
+		width: 240px
+		background-color: transparent
+		display: flex
+		justify-content: flex-start
+		align-items: start
+		//margin-bottom: 10px
+	.top_logo_link
+		margin-left: 0
+
+
+	.top_catalog_wrap
+		order: 4
+		width: 120px
+		margin-left: -15px
+		border: none
+		background-color: $bg_d
+		padding: 5px 10px 0 10px
+	.icon-bars
+		display: none
+	.top_catalog_title
+		display: block
+
+
+	.top_catalog_wrap,
+	.top_menu_wrap
+		margin-top: 10px
+		.top_menu_ul
+			display: none
+			top: auto
+			background-color: #fff
+			padding: 15px 15px 5px 15px
+			border-radius: 5px 5px 7px 7px
+			box-shadow: 0px 15px 15px -15px rgb(0, 0, 0, 51%)
+		.top_menu_ul.active
+			display: block
+			z-index: 20
+
+		.top_menu_li
+			border: none
+			font-weight: 600
+			font-size: 1.1rem
+			margin-bottom: 8px
+
+		.top_menu_link
+			background-color: $gray_d
+			border: none
+			border-radius: 5px
+			overflow: hidden
+			color: $txtb
+			padding: 8px 15px
+			text-decoration: underline
+
+	.top_menu_wrap
+		order: 6
+		width: 120px
+		margin-right: -15px
+		border: none
+		background-color: #dee0ee
+		padding: 5px 10px 0 10px
+
+	.top_phone_wrap
+		order: 3
+		width: 180px
+		height: auto
+		background-color: transparent
+		border-left-color: transparent
+
+		display: flex
+		align-items: center
+		//margin-bottom: 10px
+		padding-top: 20px
+
+	.top_menu_link
+		display: flex
+		align-items: center
+
+	.top_link
+		color: $txtb
+		background-color: transparent
+		border: none
+		box-sizing: border-box
+		border-radius: 5px 5px 0 0
+		transition: $transitionBtn
+		&:hover,
+		&:focus,
+		&:active
+			background-color: #fff
+			color: $txtb
+	.top_link.active
+		background-color: #fff
+		color: $txtb
+
+	.top_phone_link.top_link
+		display: none
+
+
+
+	.top_menu_ul.top_menu_ul-phone
+		background-color: transparent
+		position: static
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+	.top_menu_li-phone
+		width: 100%
+		border-top: none
+		color: $txtb
+		padding: 3px 0 4px 35px
+		margin-bottom: 0
+		font-weight: 500
+		//font-style: italic
+		font-size: 1rem
+		&::before
+			left: 5px
+			display: inline-block
+			width: 18px
+			height: 18px
+			border-radius: 18px
+	.top_phone_link
+		color: $txtb
+		//font-weight: 500
+		&:hover,
+		&:focus,
+		&:active
+			color: darken($txtb, 40%)
+
+	.top_menu_li-phone.callme
+		padding: 0
+		.icon-phone
+			position: static
+			display: inline-block
+			font-size: .85rem
+	.header_phone_btn
+		display: block
+		border: 1px solid $border
+		border-radius: 5px
+		padding: 3px
+		font-size: .9rem
+		letter-spacing: normal
+		text-align: center
+		color: $txtb
+		text-decoration: none
+		box-sizing: border-box
+		transition: $transitionBtn
+		margin: 7px 2px 10px 2px
+
+		.icon-phone
+			display: inline-block
+			margin-right: .4rem
+			position: static
+		&:hover
+			border-color: $txtb
+			background-color: $txtb
+			color: #fff
+			text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+
+	.top_search_wrap
+		order: 5
+		width: 470px
+		flex: 2
+		border: none
+		background-color: #dee0ee
+
+		margin-top: 10px
+
+		.top_menu_ul
+			display: block
+			position: static
+			background-color: transparent
+			height: 100%
+
+	.top_search_form
+		padding: 0
+		display: block
+		width: 100%
+		position: relative
+		padding: 5px 0 6px 0
+
+
+		.icon-search
+			display: block
+			z-index: 2
+			top: 15px
+			left: 12px
+			font-size: .9rem
+			opacity: .7
+
+	.top_search
+		display: block
+		width: 100%
+		height: 35px
+		position: absolute
+		padding: 3px 80px 3px 37px
+		border-radius: 5px
+		&::placeholder
+			opacity: .6
+
+	.top_search_btn
+		position: absolute
+		top: 11px
+		right: 6px
+		display: inline-block
+		height: 24px
+		width: auto
+		box-sizing: border-box
+		border: 1px solid $border
+		border-radius: 5px
+		padding: 2px 12px
+
+		text-transform: uppercase
+		font-size: .6rem
+		line-height: 20px
+		color: $txtb
+		text-decoration: none
+		box-sizing: border-box
+		background-color: transparent
+		transition: $transitionBtn
+		&:hover
+			border-color: $txtb
+			background-color: $txtb
+			color: #fff
+			text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+
+
+
+	.top_search_link.top_link
+		display: none
+
+	.top_time_wrap
+		display: block
+		order: 2
+		width: 175px
+		//margin-bottom: 10px
+		padding-top: 3px
+		display: flex
+		flex-direction: column
+		//align-items: center
+		//justify-content: center
+
+
+
+	.top_time_title
+		font-size: .8rem
+		line-height: .8rem
+		margin-bottom: 0
+		.icon-clock
+			display: inline-block
+			margin: .4rem
+			line-height: .8rem
+			font-size: .8rem
+			margin-left: -2px
+
+	.top_time_ul
+		padding-left: 0
+		font-size: .9rem
+		margin-bottom: 0
+	.top_time_li
+		list-style: none
+
+@media (min-width: 991.98px)
+	.container.top
+		justify-content: space-between
+		max-width: 960px
+
+	.top_logo_wrap
+		order: 1
+		width: 220px
+
+	.top_search_wrap
+		width: 340px
+		height: auto
+		//height: 120px
+		flex-basis: 340px
+		align-items: center
+		flex: 1
+		order: 2
+		margin-right: 30px
+		margin-top: 0
+		background-color: transparent
+		.top_menu_ul
+			display: flex
+			align-items: center
+
+
+	.top_search
+		border: none
+		position: static
+
+	.top_time_wrap
+		order: 3
+		width: 150px
+		//margin-top: 14px
+		padding-top: 8px
+
+
+
+	.top_time_title
+		font-size: .8rem
+		margin-bottom: 0
+		.icon-clock
+			font-size: .8rem
+	.top_time_li
+		line-height: 20px
+
+
+	.top_phone_wrap
+		order: 4
+	.header_phone_btn
+		font-size: .855rem
+
+	.top_catalog_wrap
+		display: none
+
+	.top_menu_wrap
+		width: 960px
+		height: 32px
+		margin-left: -15px
+		margin-right: -15px
+		padding: 0 15px
+		background-color: $gray_d
+		.top_menu_ul
+			display: block
+			position: static
+			background-color: transparent
+			box-shadow: none
+			border-radius: unset
+			padding: 0
+			height: 100%
+
+		.top_menu_li
+			display: inline-block
+			line-height: 32px
+			text-transform: uppercase
+			font-weight: 400
+			margin-bottom: 0
+
+		.top_menu_link
+			display: block
+			box-sizing: border-box
+			border: none
+			height: 32px
+			font-size: .71rem
+			padding: 0 11px
+			text-decoration: none
+			color: $txtb
+			overflow: hidden
+			border-radius: 0
+			transition: background-color 0.15s ease 0s, color 0.15s ease 0s
+			&:hover
+				background-color: $txt_l
+				color: #fff
+		.top_menu_link.active
+			background-color: #fff
+			&:hover
+				color: $txtb
+	.top_menu_links
+		display: none
+
+
+
+
+@media (min-width: 1199.98px)
+	.container.top
+		max-width: 1140px
+	.top_logo_wrap
+		margin-right: 10px
+
+	.top_time_wrap
+		margin-right: 20px
+
+	.top_search_wrap
+		margin-right: 40px
+
+
+	.top_menu_wrap
+		width: 1140px
+		.top_menu_link
+			//font-size: .715rem
+			padding: 0 15px
+
+
+@media (min-width: 1399.98px)
+	.container.top
+		max-width: 1320px
+
+
+	.top_logo_wrap
+		width: 250px
+		margin-right: 40px
+	.top_logo_img
+		width: 250px
+
+	.top_search_wrap
+		margin-right: 40px
+		.top_menu_ul
+			//margin-top: 37px
+	.top_search
+		height: 38px
+	.top_search_btn
+		height: 26px
+		top: 12px
+		padding: 3px 12px
+
+	.top_menu_wrap
+		width: 1320px
+	.top_search_wrap
+		margin-right: 80px
+	.top_time_wrap
+		margin-right: 40px
+
+	.top_menu_ul-phone
+		//margin-bottom: 5px

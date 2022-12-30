@@ -1,0 +1,170 @@
+.slider
+	width: calc( 100% + 30px  )
+	position: relative
+	top: -15px
+	left: -15px
+	right: -15px
+
+.slider_wrap
+	width: 100%
+	border: none
+	border-radius: 5px
+	&::before
+		content: ''
+		display: block
+		padding-top: 31.7%
+
+.slider_item_link
+	width: 100%
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+.swiper-slide.slider_item_link
+	height: auto
+.slider-btn-prev,
+.slider-btn-next
+	display: none
+
+.slider
+	.swiper-pagination-bullet.swiper-pagination-bullet-active
+		background: #fff
+
+@media (min-width: 767.98px)
+	.swiper
+		border-radius: 3px
+
+	.slider
+		width: 100%
+		top: auto
+		left: auto
+		right: auto
+		position: relative
+
+	.slider-btn-prev,
+	.slider-btn-next
+		display: block
+		width: 42px
+		height: 40px
+		position: absolute
+		top: 50%
+		margin-top: -21px
+		background-color: $txt_l
+		//overflow: hidden
+		border: none
+		z-index: 2
+		color: $gray
+		cursor: pointer
+		transition: background-color 0.3s ease 0s, opacity 0.3s ease 0s
+		.icon-chevron-left,
+		.icon-chevron-right
+			display: block
+			line-height: 40px
+			font-size: 27px
+			text-align: center
+			opacity: .7
+
+
+	.slider-btn-prev
+		left: -7px
+		border-radius: 0 6px 6px 0
+		box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, 0.2)
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			bottom: -8px
+			border: 4px solid transparent
+			border-top: 4px solid darken($txt_l, 20%)
+			border-right: 4px solid darken($txt_l, 20%)
+			z-index: -1
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: -8px
+			border: 4px solid transparent
+			border-right: 4px solid darken($txt_l, 20%)
+			border-bottom: 4px solid darken($txt_l, 20%)
+		&:hover
+			background-color: $bg_l
+			opacity: 1
+
+			&::after
+				border-top: 4px solid darken($txt_l, 12%)
+				border-right: 4px solid darken($txt_l, 12%)
+			&::before
+				border-right: 4px solid darken($txt_l, 12%)
+				border-bottom: 4px solid darken($txt_l, 12%)
+
+
+	.slider-btn-next
+		right: -7px
+		border-radius: 6px 0 0 6px
+		box-shadow:  -3px 3px 5px 0px rgba(0, 0, 0, 0.2)
+		//box-shadow: 5px 3px 5px 0px rgba(0, 0, 0, 0.9)
+		//box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, 0.2)
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			bottom: -8px
+			border: 4px solid transparent
+			border-left: 4px solid darken($txt_l, 20%)
+			border-top: 4px solid darken($txt_l, 20%)
+		&::before
+			content: ''
+			position: absolute
+			right: 0
+			top: -8px
+			border: 4px solid transparent
+			border-bottom: 4px solid darken($txt_l, 20%)
+			border-left: 4px solid darken($txt_l, 20%)
+		&:hover
+			background-color: $bg_l
+			opacity: 1
+			&::after
+				border-left: 4px solid darken($txt_l, 12%)
+				border-top: 4px solid darken($txt_l, 12%)
+			&::before
+				border-bottom: 4px solid darken($txt_l, 12%)
+				border-left: 4px solid darken($txt_l, 12%)
+
+
+	.swiper-pagination
+		text-align-last: left
+		padding-left: 30px
+
+
+
+	.slider
+		.swiper-pagination-bullet
+			background: #fff
+			border: 2px solid #fff
+			border-radius: 50%
+			display: inline-block
+			height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size, 18px))
+			width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size, 18px))
+			opacity: 1
+			//display: block
+			margin: 0px
+			padding: 0px
+
+		.swiper-pagination-bullet.swiper-pagination-bullet-active
+			background: $txt_l
+
+		.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+		.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+			margin-right: 1px
+
+
+
+
+@media (min-width: 991.98px)
+
+
+@media (min-width: 1199.98px)
+
+
+
+@media (min-width: 1399.98px)

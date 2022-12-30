@@ -1,0 +1,104 @@
+body
+	background-image: url(/images/src/img/bg.jpg)
+
+
+
+.container.wrapper
+	max-width: 100%
+	background-color: #fff
+	padding: calc(var(--bs-gutter-x)*.5)
+	display: flex
+
+.left
+	display: none
+	//background-color: $bg_l
+	//border: 1px solid $txt_l
+
+main
+	width: 100%
+	position: relative
+
+	//border: 1px solid $txt_l
+
+
+
+@media (min-width: 767.98px)
+	.container.wrapper
+		max-width: 720px
+		margin-left: auto
+		margin-right: auto
+
+
+
+	.wrapper
+		position: relative
+		&:before
+			box-shadow: -51px 0 51px -51px rgb(0, 0, 0, .15) inset
+			content: " "
+			height: 100%
+			left: -51px
+			position: absolute
+			top: 0
+			width: 51px
+
+		&:after
+			box-shadow: 51px 0 51px -51px rgb(0, 0, 0, .15) inset
+			content: " "
+			height: 100%
+			position: absolute
+			top: 0
+			right: -51px
+			width: 51px
+
+
+
+
+@media (min-width: 991.98px)
+	.container.wrapper
+		max-width: 960px
+
+	.left
+		display: block
+		width: calc( 25% - 25px )
+		margin-right: 25px
+	main
+		width: 75%
+
+
+
+@media (min-width: 1199.98px)
+	.container.wrapper
+		max-width: 1140px
+
+	.left
+		display: block
+		width: 230
+	main
+		width: calc( 100% - 255px )
+
+
+@media (min-width: 1399.98px)
+	.container.wrapper
+		max-width: 1320px
+
+	.left
+		display: block
+		width: 245
+	main
+		width: calc( 100% - 270px )
+
+@keyframes fadeIn
+	from
+		display: none
+		opacity: 0
+		height: 0
+	to
+		display: block
+		opacity: 1
+		height: 100%
+
+@keyframes appearance
+	0%
+		opacity: 0
+	100%
+		opacity: 1
