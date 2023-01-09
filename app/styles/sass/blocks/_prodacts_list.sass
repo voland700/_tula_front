@@ -1,0 +1,148 @@
+.main_goods
+.product_list_wrap
+	display: flex
+	flex-wrap: wrap
+
+.product_item
+	width: 25%
+	padding: 1px
+.product_item_inner
+	padding: 15px
+	border: 1px solid $border
+	border-radius: 5px
+
+.product_item_img_wrap
+	position: relative
+
+	&::before
+		content: ''
+		display: block
+		padding-bottom: 100%
+		//position: absolute
+		//top: 0
+
+.product_item_img_link
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+
+
+
+
+
+
+.product_item_img
+	max-width: 100%
+	max-height: 100%
+.product_item_lable_wrap
+	display: none
+.product_item_lable_img
+.product_item_lable_wrap
+.product_item_h3
+.product_item_h3_link
+.product_item_info_block
+.product_item_info_scu
+.product_item_info_scu_namber
+.product_item_info_desc
+.product_item_price_wrap
+.product_item_price_old
+.product_item_price_benefit
+.product_item_price
+.product_item_price_info
+.product_item_price_empty
+.product_item_form
+	display: flex
+	justify-content: space-between
+	//gap: 10px
+	line-height: 35px
+	height: 35px
+	user-select: none
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button
+		-webkit-appearance: none
+		margin: 0
+	input[type=number]
+		-moz-appearance: textfield
+		&::-webkit-input-placeholder
+			color: lighten($txtb, 35%)
+		&::-moz-placeholder
+			color: lighten($txtb, 35%)
+		&:-ms-input-placeholder
+			color: lighten($txtb, 35%)
+.product_item_counter_wrap
+	width: calc( 40% - 5px )
+	display: flex
+	box-sizing: border-box
+	border: 3px solid darken($border, 4%)
+	text-align: center
+
+.product_item_counter__btn
+	width: 30%
+	box-sizing: border-box
+	background-color: darken($border, 4%)
+	line-height: 29px
+	text-align: center
+	transition: color .2s ease-out
+	cursor: pointer
+	&:hover,
+	&:focus
+		color: $txtb
+
+.product_item_counter__value
+	width: 40%
+	box-sizing: border-box
+	text-align: center
+	border: 0
+	color: $txtb
+	background-color: #fff
+	border-radius: 0
+	text-align: center
+	overflow: hidden
+.product_item_btn,
+.product_item_btn_empty
+	width: calc( 60% - 5px )
+	display: block
+	box-sizing: border-box
+	font-size: .75em
+	line-height: 33px
+	text-decoration: none
+	text-transform: uppercase
+	//background-color: $bg_l
+	box-sizing: border-box
+	//border: 0
+	border-radius: 3px
+	color: #fff
+	//text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+	transition: border-color 70ms ease-out, background-color 70ms ease-out
+	.icon-cart
+		display: inline-block
+		margin-right: .5rem
+	&:hover,
+	&:focus
+		text-decoration: none
+.product_item_btn
+	background-color: $bg_l
+	border: 0
+	color: #fff
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #ffffff
+		background-color: $txtb
+
+.product_item_btn_empty
+	background-color: transparent
+	border: 1px solid darken($border, 4%)
+	color: darken($border, 4%)
+	&:hover,
+	&:focus
+		text-decoration: none
+		color: #ffffff
+		background-color: $txtb
