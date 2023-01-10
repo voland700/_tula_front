@@ -1,25 +1,37 @@
-.main_goods
+
 .product_list_wrap
 	display: flex
 	flex-wrap: wrap
 
+
 .product_item
-	width: 25%
-	padding: 1px
+	width: 100%
+	padding: 10px
+	margin-bottom: 0
+	box-sizing: border-box
+	border-top: 1px solid $border
+
+	&:last-child
+		border-bottom: 1px solid $border
+
+
+
 .product_item_inner
-	padding: 15px
-	border: 1px solid $border
-	border-radius: 5px
+	position: relative
+	display: grid
+	gap: 10px
+	grid-template-columns: 70px auto 50px
+	grid-template-rows: auto auto
+	grid-template-areas:  "img title buy" "img price buy"
 
 .product_item_img_wrap
+	grid-area: img
+	width: 70px
 	position: relative
-
 	&::before
 		content: ''
 		display: block
 		padding-bottom: 100%
-		//position: absolute
-		//top: 0
 
 .product_item_img_link
 	position: absolute
@@ -29,107 +41,115 @@
 	left: 0
 	display: flex
 	justify-content: center
-	align-items: center
+	align-items: flex-start
 	position: absolute
-
-
-
-
-
+	border: 1px solid $border
+	border-radius: 5px
+	overflow: hidden
 
 .product_item_img
 	max-width: 100%
 	max-height: 100%
-.product_item_lable_wrap
+	object-fit: contain
+
+.product_item_maker_wrap
 	display: none
-.product_item_lable_img
+
 .product_item_lable_wrap
+	position: absolute
+	bottom: -5px
+	right: auto
+	left: 32px
+
+.product_item_lable
+	position: relative
+	display: block
+	width: 40px
+	height: 20px
+	font-size: .8rem
+	//font-weight: 600
+	line-height: 20px
+	text-align: center
+	margin-bottom: 2px
+	z-index: 3
+	color: #fff
+.product_item_lable.sale
+	background-color: $sale
+.product_item_lable.new
+	background-color: $new
+.product_item_lable.hit
+	background-color: $hit
+
 .product_item_h3
+	grid-area: title
+	font-size: 1rem
+	font-weight: 400
+	margin-bottom: 0
+	height: auto
+	overflow: hidden
+
 .product_item_h3_link
+	display: block
+	padding-top: 5px
+	color: $txtb
+	$transitionBtn: color 0.15s ease
+	&:hover
+		color: $hoverLink
+
 .product_item_info_block
-.product_item_info_scu
-.product_item_info_scu_namber
-.product_item_info_desc
+	display: none
+
 .product_item_price_wrap
-.product_item_price_old
-.product_item_price_benefit
-.product_item_price
-.product_item_price_info
-.product_item_price_empty
-.product_item_form
+	grid-area: price
 	display: flex
-	justify-content: space-between
+	flex-wrap: wrap
+	//margin-bottom: 10px
+	flex-grow: 1
+.product_item_price_old
+	display: block
+	width: 100%
+	font-size: .95rem
+	line-height: 1.2
+	color: $artNamber
+	text-decoration: line-through
+	margin-bottom: .2rem
+.product_item_price_benefit
+	display: none
+.product_item_price
+	align-self: flex-end
+	font-size: 1.2rem
+	line-height: 1.2rem
+	font-weight: 600
+	color: #000
+.product_item_price_info
+	font-size: .9rem
+	font-weight: 400
+	color: $txt_l
+.product_item_price_empty
+	align-self: center
+	display: block
+	width: 100%
+	font-size: .9rem
+	line-height: 1.2
+	color: $txt_l
+.product_item_form
+	grid-area: buy
+	align-self: center
+	display: flex
+	justify-content: flex-end
 	//gap: 10px
-	line-height: 35px
-	height: 35px
+	line-height: 32px
+	height: 32px
 	user-select: none
 
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button
-		-webkit-appearance: none
-		margin: 0
-	input[type=number]
-		-moz-appearance: textfield
-		&::-webkit-input-placeholder
-			color: lighten($txtb, 35%)
-		&::-moz-placeholder
-			color: lighten($txtb, 35%)
-		&:-ms-input-placeholder
-			color: lighten($txtb, 35%)
 .product_item_counter_wrap
-	width: calc( 40% - 5px )
-	display: flex
-	box-sizing: border-box
-	border: 3px solid darken($border, 4%)
-	text-align: center
-
-.product_item_counter__btn
-	width: 30%
-	box-sizing: border-box
-	background-color: darken($border, 4%)
-	line-height: 29px
-	text-align: center
-	transition: color .2s ease-out
-	cursor: pointer
-	&:hover,
-	&:focus
-		color: $txtb
-
-.product_item_counter__value
-	width: 40%
-	box-sizing: border-box
-	text-align: center
-	border: 0
-	color: $txtb
-	background-color: #fff
-	border-radius: 0
-	text-align: center
-	overflow: hidden
-.product_item_btn,
-.product_item_btn_empty
-	width: calc( 60% - 5px )
-	display: block
-	box-sizing: border-box
-	font-size: .75em
-	line-height: 33px
-	text-decoration: none
-	text-transform: uppercase
-	//background-color: $bg_l
-	box-sizing: border-box
-	//border: 0
-	border-radius: 3px
-	color: #fff
-	//text-shadow: 1px 1px 1px rgba(43,56,62,.1)
-	transition: border-color 70ms ease-out, background-color 70ms ease-out
-	.icon-cart
-		display: inline-block
-		margin-right: .5rem
-	&:hover,
-	&:focus
-		text-decoration: none
+	display: none
 .product_item_btn
+	width: 45px
+	font-size: 0
 	background-color: $bg_l
 	border: 0
+	border-radius: 5px
 	color: #fff
 	&:hover,
 	&:focus
@@ -137,12 +157,308 @@
 		color: #ffffff
 		background-color: $txtb
 
+	.icon-cart
+		font-size: 18px
+		line-height: 30px
+		text-align: center
+
 .product_item_btn_empty
+	display: block
+	width: 45px
+	font-size: 0
 	background-color: transparent
 	border: 1px solid darken($border, 4%)
+	border-radius: 5px
 	color: darken($border, 4%)
 	&:hover,
 	&:focus
 		text-decoration: none
 		color: #ffffff
 		background-color: $txtb
+
+	.icon-bubble2
+		font-size: 18px
+		line-height: 30px
+		text-align: center
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 991.98px)
+	.main_goods
+	.product_list_wrap
+		display: flex
+		flex-wrap: wrap
+
+
+	.product_item
+		width: 25%
+		padding: 1px
+		margin-bottom: 0
+	.product_item_inner
+		display: flex
+		flex-direction: column
+		position: relative
+		height: 100%
+		padding: 15px 15px 1.5rem 15px
+		box-sizing: border-box
+		border: 1px solid $border
+		border-radius: 5px
+		$transitionBtn: box-shadow 0.15s ease 0s, border-color 0.15s ease 0s
+		&:hover,
+		&:focus
+			border-color: $bg_l
+			box-shadow: 0px 0px 15px rgba(0, 0, 0, .36)
+
+
+	.product_item_img_wrap
+		position: relative
+		margin-bottom: 1rem
+		&::before
+			content: ''
+			display: block
+			padding-bottom: 80%
+
+
+
+	.product_item_img_link
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+
+
+	.product_item_img
+		max-width: 100%
+		max-height: 100%
+		object-fit: contain
+
+	.product_item_maker_wrap
+		position: absolute
+		right: 10px
+		bottom: 0
+		max-width: 70px
+		height: auto
+	.product_item_maker_img
+		max-width: 100%
+
+
+
+
+	.product_item_lable_wrap
+		position: absolute
+		top: 1.5rem
+		right: -1px
+
+	.product_item_lable
+		position: relative
+		display: block
+		width: 45px
+		height: 22px
+		font-size: .85rem
+		//font-weight: 600
+		line-height: 22px
+		text-align: center
+		margin-bottom: 2px
+		z-index: 3
+		color: #fff
+		&::before
+			content: ""
+			border-width: 11px 0px 11px 6px
+			border-style: solid
+			width: 0px
+			height: 0px
+			position: absolute
+			left: -6px
+			top: 0px
+
+	.product_item_lable.sale
+		background-color: $sale
+		&::before
+			border-color: $sale $sale $sale transparent
+	.product_item_lable.new
+		background-color: $new
+		&::before
+			border-color: $new $new $new transparent
+
+	.product_item_lable.hit
+		background-color: $hit
+		&::before
+			border-color: $hit $hit $hit transparent
+
+	.product_item_h3
+		font-size: 1rem
+		font-weight: 400
+		height: 38px
+		overflow: hidden
+		margin-bottom: 1rem
+
+	.product_item_h3_link
+		display: block
+		color: $txtb
+		$transitionBtn: color 0.15s ease
+		&:hover
+			color: $hoverLink
+	.product_item_info_block
+		margin-bottom: 1rem
+	.product_item_info_scu
+		white-space: nowrap
+		overflow: hidden
+		font-size: .9rem
+		line-height: 1.25
+		color: $artNamber
+		margin-bottom: .5rem
+
+	.product_item_info_scu_namber
+		margin-left: .25rem
+	.product_item_info_desc
+		display: -webkit-box
+		-webkit-line-clamp: 3
+		-webkit-box-orient: vertical
+		height: 50px
+		overflow: hidden
+		font-size: .9rem
+		line-height: 1.2
+		color: $txt_l
+	.product_item_price_wrap
+		display: flex
+		flex-wrap: wrap
+		//flex-direction: column
+		margin-bottom: 1rem
+		flex-grow: 1
+	.product_item_price_old
+		display: block
+		width: 100%
+		font-size: .95rem
+		line-height: 1.2
+		color: $artNamber
+		text-decoration: line-through
+		margin-bottom: .2rem
+	.product_item_price_benefit
+		display: block
+		width: 100%
+		font-size: .9rem
+		line-height: 1.2
+		color: $sale
+		margin-bottom: .2rem
+	.product_item_price
+		align-self: flex-end
+		font-size: 1.5rem
+		line-height: 1.5rem
+		font-weight: 600
+		color: #000
+	.product_item_price_info
+		font-size: .9rem
+		font-weight: 400
+		color: $txt_l
+	.product_item_price_empty
+		align-self: center
+		display: block
+		width: 100%
+		font-size: .9rem
+		line-height: 1.2
+		color: $txt_l
+	.product_item_form
+		display: flex
+		justify-content: space-between
+		//gap: 10px
+		line-height: 32px
+		height: 32px
+		user-select: none
+
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+		input[type=number]
+			-moz-appearance: textfield
+			&::-webkit-input-placeholder
+				color: lighten($txtb, 35%)
+			&::-moz-placeholder
+				color: lighten($txtb, 35%)
+			&:-ms-input-placeholder
+				color: lighten($txtb, 35%)
+	.product_item_counter_wrap
+		width: calc( 40% - 5px )
+		display: flex
+		box-sizing: border-box
+		border: 3px solid darken($border, 4%)
+		text-align: center
+
+	.product_item_counter__btn
+		width: 30%
+		box-sizing: border-box
+		background-color: darken($border, 4%)
+		line-height: 26px
+		text-align: center
+		transition: color .2s ease-out
+		cursor: pointer
+		&:hover,
+		&:focus
+			color: $txtb
+
+	.product_item_counter__value
+		width: 40%
+		box-sizing: border-box
+		text-align: center
+		border: 0
+		color: $txtb
+		background-color: #fff
+		border-radius: 0
+		text-align: center
+		overflow: hidden
+	.product_item_btn,
+	.product_item_btn_empty
+		width: calc( 60% - 5px )
+		display: block
+		box-sizing: border-box
+		font-size: .75em
+		line-height: 31px
+		text-decoration: none
+		text-transform: uppercase
+		//background-color: $bg_l
+		box-sizing: border-box
+		//border: 0
+		border-radius: 3px
+		color: #fff
+		//text-shadow: 1px 1px 1px rgba(43,56,62,.1)
+		transition: border-color 70ms ease-out, background-color 70ms ease-out
+		.icon-cart
+			display: inline-block
+			margin-right: .5rem
+		&:hover,
+		&:focus
+			text-decoration: none
+	.product_item_btn
+		background-color: $bg_l
+		border: 0
+		color: #fff
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: #ffffff
+			background-color: $txtb
+
+	.product_item_btn_empty
+		background-color: transparent
+		border: 1px solid darken($border, 4%)
+		color: darken($border, 4%)
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: #ffffff
+			background-color: $txtb
