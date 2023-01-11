@@ -6,7 +6,7 @@
 
 .product_item
 	width: 100%
-	padding: 10px
+	padding: 10px 10px 15px 10px
 	margin-bottom: 0
 	box-sizing: border-box
 	border-top: 1px solid $border
@@ -65,10 +65,9 @@
 	position: relative
 	display: block
 	width: 40px
-	height: 20px
-	font-size: .8rem
-	//font-weight: 600
-	line-height: 20px
+	height: 16px
+	font-size: .7rem
+	line-height: 16px
 	text-align: center
 	margin-bottom: 2px
 	z-index: 3
@@ -82,8 +81,8 @@
 
 .product_item_h3
 	grid-area: title
-	font-size: 1rem
-	font-weight: 400
+	font-size: .95rem
+	font-weight: 600
 	margin-bottom: 0
 	height: auto
 	overflow: hidden
@@ -156,7 +155,6 @@
 		text-decoration: none
 		color: #ffffff
 		background-color: $txtb
-
 	.icon-cart
 		font-size: 18px
 		line-height: 30px
@@ -174,39 +172,94 @@
 	&:focus
 		text-decoration: none
 		color: #ffffff
-		background-color: $txtb
-
+		background-color: darken($border, 4%)
 	.icon-bubble2
 		font-size: 18px
 		line-height: 30px
 		text-align: center
 
+@media (min-width: 470px)
 
+	.product_item_inner
+		gap: 10px
+		grid-template-columns: 70px auto 130px
+	.product_item_h3
+		padding-left: 5px
+	.product_item_price_wrap
+		padding-left: 5px
 
+	.product_item_form
+		display: flex
+		justify-content: space-between
+		//gap: 10px
+		line-height: 32px
+		height: 32px
+		user-select: none
 
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+		input[type=number]
+			-moz-appearance: textfield
+			&::-webkit-input-placeholder
+				color: lighten($txtb, 35%)
+			&::-moz-placeholder
+				color: lighten($txtb, 35%)
+			&:-ms-input-placeholder
+				color: lighten($txtb, 35%)
+	.product_item_counter_wrap
+		width:  70px
+		display: flex
+		box-sizing: border-box
+		border: 3px solid darken($border, 4%)
+		text-align: center
 
+	.product_item_counter__btn
+		width: 30%
+		box-sizing: border-box
+		background-color: darken($border, 4%)
+		line-height: 26px
+		text-align: center
+		transition: color .2s ease-out
+		cursor: pointer
+		&:hover,
+		&:focus
+			color: $txtb
 
+	.product_item_counter__value
+		width: 40%
+		box-sizing: border-box
+		text-align: center
+		border: 0
+		color: $txtb
+		background-color: #fff
+		border-radius: 0
+		text-align: center
+		overflow: hidden
 
+@media (min-width: 500px)
+	.product_item_h3
+		font-size: .975rem
 
-
-
-
-
-
-@media (min-width: 991.98px)
+@media (min-width: 575.98px)
 	.main_goods
 	.product_list_wrap
 		display: flex
 		flex-wrap: wrap
 
-
 	.product_item
-		width: 25%
+		width: 50%
 		padding: 1px
 		margin-bottom: 0
+		border: none
+		&:last-child
+			border: none
+
 	.product_item_inner
 		display: flex
 		flex-direction: column
+		gap: 0
 		position: relative
 		height: 100%
 		padding: 15px 15px 1.5rem 15px
@@ -219,16 +272,14 @@
 			border-color: $bg_l
 			box-shadow: 0px 0px 15px rgba(0, 0, 0, .36)
 
-
 	.product_item_img_wrap
+		width: 100%
 		position: relative
 		margin-bottom: 1rem
 		&::before
 			content: ''
 			display: block
 			padding-bottom: 80%
-
-
 
 	.product_item_img_link
 		position: absolute
@@ -240,7 +291,7 @@
 		justify-content: center
 		align-items: center
 		position: absolute
-
+		border: none
 
 	.product_item_img
 		max-width: 100%
@@ -248,6 +299,7 @@
 		object-fit: contain
 
 	.product_item_maker_wrap
+		display: block
 		position: absolute
 		right: 10px
 		bottom: 0
@@ -256,12 +308,10 @@
 	.product_item_maker_img
 		max-width: 100%
 
-
-
-
 	.product_item_lable_wrap
 		position: absolute
-		top: 1.5rem
+		left: auto
+		top: 1rem
 		right: -1px
 
 	.product_item_lable
@@ -303,17 +353,21 @@
 	.product_item_h3
 		font-size: 1rem
 		font-weight: 400
-		height: 38px
+		height: 40px
 		overflow: hidden
 		margin-bottom: 1rem
 
 	.product_item_h3_link
 		display: block
 		color: $txtb
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
 		$transitionBtn: color 0.15s ease
 		&:hover
 			color: $hoverLink
 	.product_item_info_block
+		display: block
 		margin-bottom: 1rem
 	.product_item_info_scu
 		white-space: nowrap
@@ -430,12 +484,9 @@
 		line-height: 31px
 		text-decoration: none
 		text-transform: uppercase
-		//background-color: $bg_l
 		box-sizing: border-box
-		//border: 0
 		border-radius: 3px
 		color: #fff
-		//text-shadow: 1px 1px 1px rgba(43,56,62,.1)
 		transition: border-color 70ms ease-out, background-color 70ms ease-out
 		.icon-cart
 			display: inline-block
@@ -452,6 +503,9 @@
 			text-decoration: none
 			color: #ffffff
 			background-color: $txtb
+		.icon-cart
+			font-size: .785rem
+			margin-right: .6rem
 
 	.product_item_btn_empty
 		background-color: transparent
@@ -461,4 +515,64 @@
 		&:focus
 			text-decoration: none
 			color: #ffffff
+			background-color: $bg_l
+			border-color: $bg_l
+		.icon-bubble2
+			display: none
+
+@media (min-width: 767.98px)
+	.product_item
+		width: 33.33%
+	.product_item_btn_empty
+		font-size: .63rem
+
+	.product_item_lable
+		width: 40px
+		height: 20px
+		font-size: .79rem
+		line-height: 21px
+		&::before
+			border-width: 10px 0px 10px 5px
+			left: -5px
+
+
+@media (min-width: 1199.98px)
+	.product_item
+		width: 25%
+
+	.product_item_btn
+		font-size: .7rem
+		line-height: 30px
+		&:hover,
+		&:focus
+			text-decoration: none
+			color: #ffffff
 			background-color: $txtb
+		.icon-cart
+			font-size: .77rem
+
+	.product_item_btn_empty
+		font-size: .6rem
+		line-height: 30px
+
+@media (min-width: 1399.98px)
+	.product_item_lable
+		width: 45px
+		height: 22px
+		font-size: .85rem
+		line-height: 22px
+		&::before
+			border-width: 11px 0px 11px 6px
+			left: -6px
+
+	.product_item_btn,
+	.product_item_btn_empty
+		font-size: .75em
+		text-decoration: none
+		text-transform: uppercase
+		.icon-cart
+			margin-right: .5rem
+	.product_item_btn
+		.icon-cart
+			font-size: .785rem
+			margin-right: .6rem
