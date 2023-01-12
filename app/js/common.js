@@ -272,3 +272,17 @@ const counter = function () {
 	})
 }
 counter();
+
+// Left slider
+let leftSlider = new Swiper("#leftSlider", {
+	speed: 1000,
+	loop: true,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});
