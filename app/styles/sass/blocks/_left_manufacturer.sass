@@ -1,0 +1,44 @@
+.left_manufacturer
+	display: none
+@media (min-width: 991.98px)
+	.left_manufacturer
+		display: block
+		margin-bottom: 1rem
+	.left_manufacturer_h3
+		color: $txtb
+		font-size: 1.05rem
+		font-weight: 600
+		line-height: 1.3rem
+		margin-bottom: 0.7rem
+		padding-left: 1rem
+	.left_manufacturer_ul
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		list-style: none
+		margin: 0 0 .5rem 0
+		padding: 0 0 0 1rem
+	.left_manufacturer_li
+		display: block
+		width: 50%
+	.left_manufacturer_link
+		display: block
+		height: 100%
+		color: $txtb
+		font-size: .95rem
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		transition: color 0.15s ease
+		&:hover
+			color: $artNamber
+			text-decoration: none
+	.left_manufacturer_all
+		display: inline-block
+		color:$artNamber
+		font-size: .85rem
+		padding-left: 1rem
+		transition: color 0.15s ease
+		&:hover
+			color: $txtb
+			text-decoration: none
