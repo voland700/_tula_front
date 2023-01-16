@@ -26,6 +26,30 @@
 }
 
 
+.icon-facebook:before {
+  content: "\e90e";
+}
+.icon-google-plus:before {
+  content: "\e90f";
+}
+.icon-instagram:before {
+  content: "\e911";
+}
+.icon-ok:before {
+  content: "\e912";
+}
+.icon-telegram:before {
+  content: "\e913";
+}
+.icon-twitter:before {
+  content: "\e914";
+}
+.icon-vk:before {
+  content: "\e915";
+}
+.icon-youtube:before {
+  content: "\e916";
+}
 .icon-chevron-down:before {
   content: "\e909";
 }
