@@ -1,0 +1,211 @@
+.footer
+	position: relative
+	background-color: $gray_d
+	padding: calc(var(--bs-gutter-x)*.5)
+	&:before
+		box-shadow: -51px 0 51px -51px rgb(0, 0, 0, .15) inset
+		content: " "
+		height: 100%
+		left: -51px
+		position: absolute
+		top: 0
+		width: 51px
+
+	&:after
+		box-shadow: 51px 0 51px -51px rgb(0, 0, 0, .15) inset
+		content: " "
+		height: 100%
+		position: absolute
+		top: 0
+		right: -51px
+		width: 51px
+.container.footer
+	max-width: 100%
+
+.footer_menu_block
+	display: none
+
+.footer_social
+	width: 100%
+
+.footer_social_block
+	margin-bottom: 1rem
+.footer_social_h3
+	font-size: 1.25rem
+.footer_social_ul
+	display: flex
+	flex-wrap: wrap
+	padding: 0
+	margin: 0 0 1rem 0
+	list-style: none
+.footer_social_li
+	display: block
+	width: 32px
+	height: 32px
+	margin-right: 3px
+	margin-bottom: 3px
+
+.footer_social_link
+	display: block
+	width: 100%
+	height: 100%
+	font-size: 0
+	line-height: 30px
+	color: $formBtn
+	cursor: pointer
+	transition: color 0.15s ease 0s
+	[class^="icon-"],
+	[class*=" icon-"]
+		font-size: 30px
+
+
+	&:hover,
+	&:focus-visible
+		.icon-vk
+			color: #3b5998
+		.icon-facebook
+			color: #3b5998
+		.icon-ok
+			color: #ff6800
+		.icon-twitter
+			color: #00aced
+		.icon-youtube
+			color: #e62117
+		.icon-google-plus
+			color: #c53b29
+		.icon-instagram
+			color: #e94a26
+		.icon-telegram
+			color: #139bd0
+
+
+
+.footer_payment_block
+.footer_payment_h3
+	font-size: 1.25rem
+.footer_payment_ul
+	display: flex
+	flex-wrap: wrap
+	padding: 0
+	margin: 0 0 1rem 0
+	list-style: none
+.footer_payment_li
+	display: block
+	width: 66px
+	height: 30px
+	position: relative
+	margin-right: 5px
+	margin-bottom: 5px
+	font-size: 0
+	overflow: hidden
+	border-radius: 5px
+	background: 0 0
+	background-image: url(/images/src/img/icons/payment_icons.png)
+	background-repeat: no-repeat
+
+
+.footer_payment_li.world
+	background-position: 0 0
+.footer_payment_li.visa
+	background-position: -71px 0
+.footer_payment_li.master
+	background-position: -142px 0
+.footer_payment_li.alfa
+	background-position: -213px 0
+.footer_payment_li.sber
+	background-position: -284px 0
+.footer_payment_li.yndex
+	background-position: -355px 0
+.footer_payment_li.cash
+	background-position: -426px 0
+.footer_payment_li.invoce
+	background-position: -497px 0
+
+.footer_bottom_block
+	width: 100%
+	font-size: .8rem
+	color: $artNamber
+	line-height: 1.35
+	padding: 1rem 0 0 1rem
+	border-top: 1px solid $border
+
+
+
+@media (min-width: 767.98px)
+	.container.footer
+		max-width: 720px
+		margin-left: auto
+		margin-right: auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+
+
+	.footer_menu_block
+		display: block
+		width: 25%
+	.footer_social_h3,
+	.footer_payment_h3,
+	.footer_menu_h3
+		font-size: 1.2rem
+		//margin-bottom: .75rem
+	.footer_menu_ul
+		list-style: none
+		padding-left: 2px
+
+	.footer_menu_li
+		font-size: .85rem
+
+	.footer_menu_link
+		color: $txtb
+		transition: color 0.15s ease 0s, text-decoration 0.15s ease 0s
+		&:hover,
+		&:focus-visible
+			color: $hoverLink
+			text-decoration: none
+
+
+
+
+
+@media (min-width: 991.98px)
+	.container.footer
+		max-width: 960px
+		display: flex
+		flex-wrap: wrap
+		padding-top: 2rem
+	.footer_menu_wrap
+		display: flex
+		justify-content: space-around
+	.footer_menu_block
+		width: calc( 25% - 30px )
+	.footer_social
+		width: 25%
+
+	.footer_bottom_block
+		width: 100%
+		padding-left: 1rem
+
+
+
+@media (min-width: 1199.98px)
+	.container.footer
+		max-width: 1140px
+
+	.footer_menu_wrap
+		width: 80%
+	.footer_menu_block
+		width: 180px
+
+	.footer_social
+		width: 300px
+
+
+	.footer_bottom_block
+		width: 100%
+		padding-left: 1rem
+		margin-top: 1.5rem
+
+@media (min-width: 1399.98px)
+	.container.footer
+		max-width: 1320px

@@ -7,6 +7,7 @@ body
 	max-width: 100%
 	background-color: #fff
 	padding: calc(var(--bs-gutter-x)*.5)
+	padding-bottom: 0
 	display: flex
 	flex-direction: column
 
@@ -20,6 +21,33 @@ main
 	width: 100%
 	position: relative
 	order: 1
+
+.btn-up
+	display: block
+	width: 40px
+	height: 40px
+	position: fixed
+	right: 20px
+	bottom: 68px
+	border: none
+	border-radius: 10px
+	background-color: $txtb
+	opacity: .3
+	z-index: 100
+	color: #fff
+	text-align: center
+	//line-height: 38px
+	line-height: 35px
+	cursor: pointer
+	transition: opacity 0.25s ease 0s
+	padding-top: 6px
+	&:hover
+		opacity: .5
+	.icon-chevron-up
+		font-size: 1.1rem
+		font-weight: 600
+
+
 
 
 
