@@ -1,0 +1,45 @@
+.catalog_item
+.catalog_item_top
+	display: flex
+	height: 44px
+	box-sizing: border-box
+	border: 2px solid $gray_d
+	border-radius: 5px
+	background-color: $gray_d
+	margin-bottom: .5rem
+	transition: color 0.15s ease 0s, border-color 0.15s ease 0s, background-color 0.15s ease 0s
+	&:hover
+		border-color: $bg_l
+		background-color: transparent
+		.catalog_item_h3_link
+			color: $hoverLink
+			text-decoration: none
+
+
+
+.catalog_item_h3
+	display: block
+	width: calc( 100% - 40px )
+.catalog_item_h3_link
+	display: block
+	height: 100%
+	font-size: 1.1rem
+	line-height: 40px
+	font-weight: 600
+	color: $txtb
+	padding: 0 1rem
+	white-space: nowrap
+	overflow: hidden
+.catalog_item_btn
+	display: block
+	width: 40px
+	height: 40px
+	font-size: 1.8rem
+	font-weight: 700
+	line-height: 40px
+	text-align: center
+	color: $border
+	cursor: pointer
+	transition: color 0.15s ease 0s
+	&:hover
+		color: $bg_l

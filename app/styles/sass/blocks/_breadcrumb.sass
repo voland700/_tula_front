@@ -1,0 +1,41 @@
+.breadcrumb_wrap
+	margin-bottom: .75rem
+.breadcrumb
+	display: flex
+	flex-wrap: wrap
+
+	list-style: none
+	margin: 0
+	padding: 0
+.breadcrumb-item
+	color: $artNamber
+	font-size: .85rem
+	//line-height: .9rem
+	a
+		display: inline-block
+		padding-left: .5rem
+		color: $artNamber
+		transition: color 0.15s ease 0s, text-decoration 0.15s ease 0s
+		&::after
+			content: '|'
+			display: inline-block
+			font-size: .8rem
+			margin-left: .5rem
+		&:hover,
+		&:focus
+			color: darken($artNamber, 15%)
+			text-decoration: none
+
+
+.breadcrumb-item:first-child
+	a
+		font-size: 0
+		text-decoration: none
+		padding-left: 0
+		.icon-home
+			font-size: .85rem
+			line-height: .8rem
+
+	span
+.breadcrumb-item.active
+	padding: 0 .5rem
