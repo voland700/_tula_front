@@ -23,7 +23,7 @@
 .catalog_item_h3_link
 	display: block
 	height: 100%
-	font-size: 1.1rem
+	font-size: 1rem
 	line-height: 40px
 	font-weight: 600
 	color: $txtb
@@ -32,6 +32,7 @@
 	overflow: hidden
 .catalog_item_btn
 	display: block
+	position: relative
 	width: 40px
 	height: 40px
 	font-size: 1.8rem
@@ -41,5 +42,19 @@
 	color: $border
 	cursor: pointer
 	transition: color 0.15s ease 0s
+	&::after
+		content: '–'
+		position: absolute
+		inset: 0
+		font-size: 1.8rem
+		font-weight: 600
 	&:hover
 		color: $bg_l
+
+.catalog_item_btn.hidden
+	&::after
+		content: '+'
+
+.catalog_item_wrap
+	margin-bottom: 1rem
+	overflow: hidden

@@ -286,3 +286,21 @@ let leftSlider = new Swiper("#leftSlider", {
 		clickable: true,
 	},
 });
+
+//Catalog items toggle
+	document.querySelectorAll('.catalog_item_btn').forEach(function (elem) {
+		elem.addEventListener('click', function (item) {
+			item.preventDefault();
+			let btnSelected = item.currentTarget;
+			let itemsList = btnSelected.parentNode.nextElementSibling;
+
+			if (!btnSelected.classList.contains('hidden')){
+				btnSelected.classList.add('hidden');
+				slideUp(itemsList, 500);
+			} else {
+				btnSelected.classList.remove('hidden');
+				slideDown(itemsList, 500);
+			}
+
+		});
+	});
