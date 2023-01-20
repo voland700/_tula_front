@@ -178,6 +178,79 @@
 		line-height: 30px
 		text-align: center
 
+
+.product_sort_wrap
+	color: $bg_l
+	font-size: .85rem
+	line-height: 1.5
+.product_sort_amount
+	display: inline-block
+	color: $txtb
+	font-weight: 600
+	margin: 0 .25rem
+
+.product_sort_mob
+	display: inline-block
+	margin-right: .5rem
+.product_sort_desc
+	display: none
+	margin-right: .5rem
+
+.product_sort_empty,
+.product_sort_btn
+	display: inline-block
+	border: 1px solid $bg_d
+	border-radius: 4px
+	padding: 3px 10px
+	color: $txtb
+	text-decoration: none
+	margin-right: .15rem
+	transition: color 0.25s ease 0s, border-color 0.25s ease 0s, background-color 0.25s ease 0s
+
+.product_sort_empty
+	pointer-events: none
+	cursor: default
+	opacity: .5
+	user-select: none
+
+.product_sort_btn.up,
+.product_sort_btn.down
+	padding-right: 28px
+	background-color: $bg_d
+	position: relative
+	&::after
+		content: ""
+		display: block
+		position: absolute
+		right: 8px
+		width: 6px
+		height: 6px
+		border: 6px solid transparent
+	&:hover
+		color: $txtb
+
+.product_sort_btn.up
+	&::after
+		border-top: 6px solid $artNamber
+		top: 50%
+
+.product_sort_btn.down
+	&::after
+		border-bottom: 6px solid $artNamber
+		top: 6px
+
+.product_sort_btn.not
+	&:hover
+		border: 1px solid $txtb
+		background-color: $txtb
+		color: #fff
+
+@media (min-width: 400px)
+	.product_sort_mob
+		display: none
+	.product_sort_desc
+		display: inline-block
+
 @media (min-width: 470px)
 
 	.product_item_inner
