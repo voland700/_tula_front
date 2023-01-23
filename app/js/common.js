@@ -343,3 +343,14 @@ document.querySelectorAll('.product_sort_btn').forEach(function (elem) {
 
 	});
 });
+
+
+// Product images gallery
+if(document.getElementById('productImg')){
+	let productImg = document.getElementById('productImg');
+	productImg.addEventListener('click', function (item) {
+		item.preventDefault();
+		//const imgGroup =
+
+	});
+}

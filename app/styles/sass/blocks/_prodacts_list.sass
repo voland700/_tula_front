@@ -3,6 +3,7 @@
 	display: flex
 	flex-wrap: wrap
 
+	margin-bottom: 2rem
 
 .product_item
 	width: 100%
@@ -13,8 +14,6 @@
 
 	&:last-child
 		border-bottom: 1px solid $border
-
-
 
 .product_item_inner
 	position: relative
@@ -326,6 +325,9 @@
 		padding: 1px
 		margin-bottom: 0
 		border: none
+
+
+		position: relative
 		&:last-child
 			border: none
 
@@ -343,6 +345,7 @@
 		&:hover,
 		&:focus
 			border-color: $bg_l
+			//border: 2px solid $bg_l
 			box-shadow: 0px 0px 15px rgba(0, 0, 0, .36)
 
 	.product_item_img_wrap

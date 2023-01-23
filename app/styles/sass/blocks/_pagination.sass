@@ -1,0 +1,70 @@
+.pagination_list
+	display: flex
+	flex-wrap: wrap
+
+	list-style: none
+
+	padding: 0
+	margin: 0
+
+.pagination_direct
+	display: inline-block
+	line-height: 28px
+	font-size: .95rem
+	margin-right: .25rem
+	margin-bottom: .375rem
+
+
+.pagination_direct.dormant
+	display: none
+
+.pagination_direct_link
+	display: block
+	min-width: 65px
+	box-sizing: border-box
+	border: 1px solid $border
+	background-color: $border
+	border-radius: 4px
+	height: 30px
+	text-align: center
+	color: $txtb
+	text-decoration: none
+	padding: 0 5px
+	transition: border-color 0.15s ease 0s, background-color 0.15s ease 0s
+	&:hover
+		border-color: $txtb
+		background-color: $txtb
+		color: #fff
+
+.pagination_direct_link.prev
+.pagination_direct_link.next
+.pagination_item
+	display: inline-block
+	line-height: 28px
+	font-size: 1rem
+	margin-right: .25rem
+	margin-bottom: .375rem
+
+.pagination_link
+	display: block
+	min-width: 35px
+	box-sizing: border-box
+	border: 1px solid $border
+	border-radius: 4px
+	height: 30px
+	text-align: center
+	color: $txtb
+	text-decoration: none
+	padding: 0 5px
+	transition: border-color 0.15s ease 0s, background-color 0.15s ease 0s
+	&:hover
+		border-color: $txtb
+		background-color: $txtb
+		color: #fff
+
+.pagination_item
+	.pagination_link.active
+		border-color: $bg_l
+		background-color: $bg_l
+		color: #fff
+		pointer-events: none
