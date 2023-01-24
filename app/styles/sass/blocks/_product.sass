@@ -20,10 +20,48 @@
 
 
 .product_label_list
+	position: absolute
+	top: 5px
+	right: 0
 
+.product_label
+	position: relative
+	display: block
+	width: 45px
+	height: 22px
+	font-size: .85rem
+	//font-weight: 600
+	line-height: 22px
+	text-align: center
+	margin-bottom: 2px
+	z-index: 3
+	color: #fff
+	&::before
+		content: ""
+		border-width: 11px 0px 11px 6px
+		border-style: solid
+		width: 0px
+		height: 0px
+		position: absolute
+		left: -6px
+		top: 0px
 .product_label.hit
-.product_label.action
+	background-color: $hit
+	&::before
+		border-color: $hit $hit $hit transparent
+
+.product_label.sale
+	background-color: $sale
+	&::before
+		border-color: $sale $sale $sale transparent
+
 .product_label.new
+	background-color: $new
+	&::before
+		border-color: $new $new $new transparent
+
+
+
 .product_main_img_link
 	position: absolute
 	inset: 0
@@ -77,6 +115,80 @@
 .product_info_block
 	width: calc(30% - 20px)
 	border: 1px solid #777
+
+.product_info_scu
+	font-size: .9rem
+	color: $artNamber
+	line-height: 1.5
+	margin-bottom: .5rem
+	padding: 0 15px
+.product_info_txt
+	font-size: .9rem
+	color: $txt_l
+	line-height: 1.5
+	padding: 0 15px
+.product_info_gift_item
+	position: relative
+	border: 3px solid $bg_l
+	border-radius: 4px
+	padding: 10px 15px
+
+	&::after
+		content: ''
+		height: 0
+		width: 0
+		position: absolute
+		top: 1rem
+		right: 0
+
+
+
+.product_info_gift_h3
+	font-size: .95rem
+	font-weight: 600
+	line-height: 1.5
+
+.product_info_gift_inner
+	display: flex
+
+.product_info_gift_img_wrap
+	width: 70px
+	height: 70px
+	border: 1px solid  $border
+	border-radius: 3px
+	overflow: hidden
+	margin-right: 15px
+
+.product_info_gift_img
+	width: 100%
+.product_info_gift_txt
+	width: calc( 100% - 85px )
+	font-size: .8rem
+	color: $txtb
+	line-height: 1.5
+.product_info_warranty_wrap
+.product_info_warranty_h3
+.product_info_warranty
+.product_info_benefit_ul
+.product_info_benefit_li
+.product_info_benefit_icon_wrap
+.product_info_benefit_icon
+.product_info_benefit_txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .product_buy_block
 	width: calc(30% - 20px)
 	border: 1px solid #777
