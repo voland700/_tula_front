@@ -26,6 +26,24 @@
 }
 
 
+.icon-comment-dots1:before {
+  content: "\e907";
+}
+.icon-credit-card1:before {
+  content: "\e917";
+}
+.icon-truck1:before {
+  content: "\e918";
+}
+.icon-credit-card:before {
+  content: "\e919";
+}
+.icon-comment-dots:before {
+  content: "\e91a";
+}
+.icon-bolt-full:before {
+  content: "\e91b";
+}
 .icon-facebook:before {
   content: "\e90e";
 }
@@ -92,8 +110,26 @@
 .icon-home2:before {
   content: "\e906";
 }
-.icon-pencil:before {
-  content: "\e907";
+.icon-pencil2:before {
+  content: "\e91d";
+}
+.icon-quill:before {
+  content: "\e91e";
+}
+.icon-file-play:before {
+  content: "\e929";
+}
+.icon-file-video:before {
+  content: "\e92a";
+}
+.icon-file-zip:before {
+  content: "\e92b";
+}
+.icon-copy:before {
+  content: "\e92c";
+}
+.icon-paste:before {
+  content: "\e92d";
 }
 .icon-price-tag:before {
   content: "\e935";
@@ -115,6 +151,9 @@
 }
 .icon-compass:before {
   content: "\e949";
+}
+.icon-history:before {
+  content: "\e94d";
 }
 .icon-clock:before {
   content: "\e94e";
@@ -148,6 +187,9 @@
 }
 .icon-shield:before {
   content: "\e9b4";
+}
+.icon-power:before {
+  content: "\e9b5";
 }
 .icon-menu:before {
   content: "\e9bd";
