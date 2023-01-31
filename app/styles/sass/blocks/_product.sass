@@ -3,13 +3,11 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: space-between
+	margin-bottom: 2rem
 .product_img_block
 	width: 100%
 	order: 1
 	margin-bottom: 2rem
-
-
-
 
 .product_main_img_wrap
 	position: relative
@@ -19,7 +17,6 @@
 		content: ''
 		display: block
 		padding-top: 100%
-
 
 .product_label_list
 	position: absolute
@@ -133,6 +130,7 @@
 	color: $txt_l
 	line-height: 1.5
 	padding: 0 15px
+	margin-bottom: 1rem
 .product_info_gift_item
 	position: relative
 	border: 3px solid $bg_l
@@ -149,7 +147,6 @@
 		right: -22px
 		border: 10px solid transparent
 		border-left: 10px solid $bg_l
-
 
 
 .product_info_gift_h3
@@ -308,6 +305,7 @@
 	text-align: center
 	transition: color .2s ease-out
 	cursor: pointer
+	user-select: none
 	&:hover,
 	&:focus
 		color: $txtb
@@ -507,6 +505,67 @@
 	color: $artNamber
 
 
+.product_property_block
+	color: $txt_l
+	line-height: 1.55
+	margin-bottom: 2rem
+	padding: 0 5px
+.product_property_h2
+	font-size: 1.3rem
+	font-weight: 600
+	color: lighten($txtb, 10%)
+	margin: 1.3rem 0 1rem 0
+.product_property_ul
+	list-style: none
+	padding: 0
+	margin: 0
+
+
+
+.product_property_li
+	display: flex
+	margin-bottom: .25rem
+.product_property_term
+
+.dots
+	flex-grow: 1
+	border-bottom: 1px dashed $gray_d
+
+
+.product_property_value
+	font-style: italic
+	a
+		transition: color 0.15s ease 0s
+		color: darken($txt_l, 30% )
+		&:hover
+			color: $txt_l
+			text-decoration: none
+
+.product_extra_block
+	margin-bottom: 2rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -523,3 +582,106 @@
 		width: 70px
 		margin-right: 0
 		margin-bottom: 0
+
+
+
+@media (min-width: 575.98px)
+	.product_main_img_wrap
+		width: 80%
+		&::before
+			padding-top: 80%
+
+
+@media (min-width: 991.98px)
+	.product_img_block
+		width: 430px
+	.product_main_img_wrap
+		width: 100%
+		&::before
+			padding-top: 100%
+
+	.product_images_list
+		justify-content: flex-start
+
+	.product_images_item
+		width: 63.25px
+
+	.product_buy_block
+		width: 240px
+		order: 2
+		background-color: transparent
+	.product_buy_inner
+		width: 100%
+		margin-bottom: 1rem
+	.product_buy_law
+		width: 100%
+
+@media (min-width: 1199.98px)
+	.product_img_block
+		width: 320px
+	.product_images_item
+		width: 56px
+
+	.product_info_block
+		width: 240px
+		order: 2
+
+	.product_info_txt
+		line-height: 1.45
+		font-size: .85rem
+		padding-right: 5px
+	.product_info_gift_img_wrap
+		width: 55px
+		height: 55px
+
+	.product_info_gift_txt
+		width: calc(100% - 75px)
+		font-size: .75rem
+		line-height: 1.45
+
+	.product_info_benefit_ul
+		padding-left: 15px
+		padding-right: 5px
+		//padding-top: 0
+
+	.product_info_benefit_icon_wrap
+		margin-right: 15px
+
+	.product_info_benefit_txt
+		width: calc(100% - 66px)
+		line-height: 1.45
+
+
+@media (min-width: 1399.98px)
+
+	.product_img_block
+		width: 440px
+	.product_images_item
+		width: 65px
+
+	.product_info_block
+		width: 260px
+		order: 2
+
+	.product_info_txt
+		line-height: 1.45
+		font-size: .85rem
+	.product_info_gift_img_wrap
+		width: 70px
+		height: 70px
+
+	.product_info_gift_txt
+		width: calc( 100% - 85px )
+		font-size: .8rem
+		line-height: 1.5
+
+	.product_info_benefit_ul
+		padding-left: 20px
+	.product_info_benefit_icon_wrap
+		margin-right: 20px
+	.product_info_benefit_txt
+		width: calc(100% - 71px)
+		line-height: 1.45
+
+	.product_buy_block
+		width: 250px

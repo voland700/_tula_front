@@ -273,6 +273,34 @@ const counter = function () {
 }
 counter();
 
+
+//*--- Counter for product page  ---*//
+if(document.getElementById('ProductForm')){
+const counterProduct = function () {
+	const btns = document.querySelectorAll('.product_buy_counter__btn');
+	btns.forEach(btn => {
+		btn.addEventListener('click', function () {
+			const direction = this.dataset.direction;
+			const inp = this.parentElement.querySelector('.product_buy_counter__value');
+			const currentValue = +inp.value;
+			let newValue;
+			if (direction === 'plus') {
+				newValue = currentValue + 1;
+			} else {
+				newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
+			}
+			if(typeof newValue !== NaN){
+				inp.value =  newValue;
+			} else {
+				inp.value =  1;
+			}
+		})
+	})
+}
+counterProduct();
+}
+
+
 // Left slider
 let leftSlider = new Swiper("#leftSlider", {
 	speed: 1000,

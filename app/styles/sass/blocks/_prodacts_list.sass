@@ -182,6 +182,7 @@
 	color: $bg_l
 	font-size: .85rem
 	line-height: 1.5
+	margin-bottom: 1rem
 .product_sort_amount
 	display: inline-block
 	color: $txtb
@@ -346,7 +347,7 @@
 		&:focus
 			border-color: $bg_l
 			//border: 2px solid $bg_l
-			box-shadow: 0px 0px 15px rgba(0, 0, 0, .36)
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, .36)
 
 	.product_item_img_wrap
 		width: 100%
@@ -370,8 +371,10 @@
 		border: none
 
 	.product_item_img
-		max-width: 100%
-		max-height: 100%
+		//max-width: 100%
+		//max-height: 100%
+		max-width: 95%
+		max-height: 95%
 		object-fit: contain
 
 	.product_item_maker_wrap
@@ -388,7 +391,7 @@
 		position: absolute
 		left: auto
 		top: 1rem
-		right: -1px
+		right: -2px
 
 	.product_item_lable
 		position: relative
@@ -461,8 +464,8 @@
 		-webkit-box-orient: vertical
 		height: 50px
 		overflow: hidden
-		font-size: .9rem
-		line-height: 1.2
+		font-size: .85rem
+		line-height: 1.3
 		color: $txt_l
 	.product_item_price_wrap
 		display: flex

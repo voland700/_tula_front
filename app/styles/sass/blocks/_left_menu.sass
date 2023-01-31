@@ -42,6 +42,7 @@
 				border-color: $bg_l
 				color: #fff
 				text-decoration: none
+				z-index: 4
 			.left_menu_sub_ul
 				display: block
 				animation: appearance .25s forwards
@@ -152,6 +153,11 @@
 		&::after
 			left: 210px
 
+		&:hover,
+		&:focus
+			width: calc( 100% + 20px )
+
+
 @media (min-width: 1399.98px)
 	.left_menu_li_link
 			padding: 8px 32px 8px 11px
@@ -159,7 +165,7 @@
 	.left_menu_sub_ul
 		//max-width: 876px
 		//width: 916px
-		left: 257px
+		left: 247px
 
 	.left_menu_li.sub
 		&::after
