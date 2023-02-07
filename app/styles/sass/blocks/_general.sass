@@ -181,11 +181,20 @@ main
 .video_wrap
 	display: flex
 	flex-wrap: wrap
+	justify-content: space-around
+	margin: 2rem 0 2rem 0
+.video_wrap.one
+	.video_item
+		width: 600px
+		margin: 0 auto
 
-.video_item.one
-	width: 700px
-	margin: 0 auto
+.video_item
+	width: calc( 50% - 50px )
+	border: none
+	border-radius: 3px
+	overflow: hidden
 	position: relative
+	margin-bottom: 1rem
 	&::before
 		content: ''
 		position: absolute
@@ -194,13 +203,29 @@ main
 	img
 		width: 100%
 		height: auto
+		object-fit: cover
+		object-position: 50% 50%
+
+	&:hover
+		.video_icon
+			//fill: $txtb
+			opacity: .8
+
+
+
 
 .video_icon
+	fill: red
 	width: 70px
-	height: auto
+	height: 62px
 	position: absolute
 	right: 50%
 	top: 50%
+	transform: translate(50%, -50%)
+	transition: fill 0.25s ease 0s, opacity 0.25s ease 0s
+#youtube
+	box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.5)
+
 
 
 
